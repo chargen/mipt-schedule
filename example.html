@@ -6,20 +6,33 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Mipt Schedule</title>
 
-      <!-- Bootstrap -->
       <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/main.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="tooltipster/css/tooltipster.css" />
+      <link rel="stylesheet" type="text/css" href="tooltipster/css/themes/tooltipster-light.css" />
 
-      <style type="text/css">
-        body { background: white; }
-      </style>
+      <link href="css/main.css" rel="stylesheet">
     </head>
 
     <body>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="tooltipster/js/jquery.tooltipster.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('div.ms-cell-half, div.ms-cell-full, div.ms-cell-one-and-half, div.ms-cell-double').each(function() {
+                    current = $(this);
+                    current.tooltipster({
+                        content: current.html(),
+                        contentAsHTML: true,
+                        trigger: "click",
+                        theme: 'tooltipster-light',
+                        arrow: true,
+                        position: "bottom"
+                    });
+                });
+            });
+        </script>
 
         <br>
 
@@ -27,7 +40,7 @@
 
             <div class="col-lg-5">
                 <div class="row">
-                    <div class="col-xs-12 ms-day-header text-center">Понедельник</div>
+                    <div id="test" class="col-xs-12 ms-day-header text-center">Понедельник</div>
                     <div class="col-xs-2">
                         <div class="row ms-margin-top ms-padding-right">
                             <div class="col-xs-12 ms-cell-time text-center">
@@ -74,12 +87,14 @@
                     </div>
                     <div class="col-xs-10">
                         <div class="row ms-margin-top">
-                            <div class="col-xs-12 ms-cell-half ms-cell-class-seminar">Теоретическая физика, 510 ГК, Иванов А. В.</div>
+                            <div class="col-xs-12 ms-cell-half ms-cell-class-seminar ms-truncate">
+                                Случайные процессы и случайные поля в физических системах, 123 ГК, Колачевский Н. Н.
+                            </div>
                         </div>
                         <div class="row ms-margin-top">
                             <div class="col-xs-6">
                                 <div class="row ms-padding-right">
-                                    <div class="col-xs-12 ms-cell-full ms-cell-class-seminar">Теоретическая физика<br>510 ГК, Иванов А. В.</div>
+                                    <div class="col-xs-12 ms-cell-full ms-cell-class-seminar ms-truncate">Теоретическая физика такая теоретическая<br>510 ГК, Иванов А. В.</div>
                                 </div>
                             </div>
                             <div class="col-xs-6 ms-cell-full ms-cell-class-seminar">Теоретическая физика</div>
@@ -174,7 +189,7 @@
                             </div>
                         </div>
                         <div class="row ms-margin-top">
-                            <div class="col-xs-12 ms-cell-full ms-cell-class-lecture">Численное моделирование<br>115 KПМ, Уткин П. С.</div>
+                            <div class="col-xs-12 ms-cell-full ms-cell-class-lecture ms-truncate">Численное моделирование такое численное моделирование<br>115 KПМ, Уткин П. С.</div>
                         </div>
                         <div class="row ms-margin-top">
                             <div class="col-xs-12 ms-cell-half ms-cell-class-empty"></div>

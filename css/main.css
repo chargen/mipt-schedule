@@ -1,3 +1,7 @@
+body {
+  background: white;
+}
+
 [class*="ms-margin-top"] {
   margin-top: 2px;
 }
@@ -41,23 +45,23 @@
 
 [class*="ms-cell-time"] {
   height: 66px;
-  background-color: #e0ffff;
+  background-color: #f5deb3;
 }
 
 [class*="ms-cell-class-empty"] {
-  background-color: #98fb98;
+  background-color: #ccffcc;
 }
 
 [class*="ms-cell-class-lecture"] {
-  background-color: #ff85b4;
+  background-color: #ff99cc;
 }
 
 [class*="ms-cell-class-seminar"] {
-  background-color: #00ffff;
+  background-color: #ccffff;
 }
 
 [class*="ms-cell-class-other"] {
-  background-color: #ffee00;
+  background-color: #ffff99;
 }
 
 [class*="ms-pull-bottom"] {
@@ -68,6 +72,12 @@
 [class*="ms-pull-top"] {
     position: absolute;
     top: 5px;
+}
+
+.ms-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Add "row-flex row-flex-wrap" classes to "row" to make cols the same height". */
