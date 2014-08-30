@@ -48,6 +48,7 @@ body {
 [class*="ms-cell-time"] {
   height: 66px;
   background-color: #f5deb3;
+  padding-top: 3px;
 }
 
 [class*="ms-cell-class-empty"] {
