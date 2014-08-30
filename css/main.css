@@ -15,11 +15,6 @@ body {
   padding-bottom: 5px;
 }
 
-[class*="ms-cell"] {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 [class*="ms-cell-half"] {
   height: 32px;
@@ -49,6 +44,15 @@ body {
   height: 66px;
   background-color: #f5deb3;
   padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+[class*="ms-cell-class"] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 [class*="ms-cell-class-empty"] {
@@ -75,12 +79,6 @@ body {
 [class*="ms-pull-top"] {
     position: absolute;
     top: 5px;
-}
-
-.ms-truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* Add "row-flex row-flex-wrap" classes to "row" to make cols the same height". */
