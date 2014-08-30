@@ -1,0 +1,96 @@
+[class*="ms-margin-top"] {
+  margin-top: 2px;
+}
+
+[class*="ms-padding-right"] {
+  padding-right: 2px;
+}
+
+[class*="ms-day-header"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+[class*="ms-cell"] {
+  /*border: 1px solid #000000;*/
+}
+
+[class*="ms-cell-half"] {
+  height: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+[class*="ms-cell-full"] {
+  height: 66px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+[class*="ms-cell-one-and-half"] {
+  height: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+[class*="ms-cell-double"] {
+  height: 134px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+[class*="ms-cell-time"] {
+  height: 66px;
+  background-color: #e0ffff;
+}
+
+[class*="ms-cell-class-empty"] {
+  background-color: #98fb98;
+}
+
+[class*="ms-cell-class-lecture"] {
+  background-color: #ff85b4;
+}
+
+[class*="ms-cell-class-seminar"] {
+  background-color: #00ffff;
+}
+
+[class*="ms-cell-class-other"] {
+  background-color: #ffee00;
+}
+
+[class*="ms-pull-bottom"] {
+    position: absolute;
+    bottom: 5px;
+}
+
+[class*="ms-pull-top"] {
+    position: absolute;
+    top: 5px;
+}
+
+/* Add "row-flex row-flex-wrap" classes to "row" to make cols the same height". */
+
+.row-flex, .row-flex > div[class*='col-'] {  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.row-flex-wrap {
+  -webkit-flex-flow: row wrap;
+    align-content: flex-start;
+    flex:0;
+}
+
+.row-flex > div[class*='col-'], .container-flex > div[class*='col-'] {
+   margin:-.2px; /* hack adjust for wrapping */
+}
+
+.container-flex > div[class*='col-'] div,.row-flex > div[class*='col-'] div {
+  width:100%;
+}
