@@ -1,3 +1,7 @@
 *.pyc
 *.swp
 *.sublime-workspace
+
+test-results/
+tmp/
+routes/
